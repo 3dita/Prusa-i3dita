@@ -63,7 +63,7 @@ module x_end_motor_holes(){
   // Material saving cutout
   translate(v=[-10,42,-30]) rotate(a=[45,0,0])  cube(size = [60,42,42], center = true);
   // Motor shaft cutout
-  translate(v=[0,0,0]) rotate(a=[0,-90,0]) rotate(a=[0,0,90]) cylinder(h = 70, r=17, $fn=6);
+  translate(v=[0,1,0]) rotate(a=[0,-90,0]) rotate(a=[0,0,90]) cylinder(h = 70, r=17, $fn=6);
   // Motor shaft cutout
   translate(v=[0,2,0]) rotate(a=[0,-90,0]) rotate(a=[0,0,90]) cylinder(h = 70, r=17, $fn=6);
  }
