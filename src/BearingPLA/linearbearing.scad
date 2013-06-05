@@ -177,11 +177,25 @@ module TLB_print(s = 4) {
 					TLB_linearBearing(
 							inner_d          = 8.1, 
 							outer_d          = 15,
-							h                = 58,
+							h                = 23,
 							stringWidth      = 0.48,
-							minWallThickness = 0.4, 
+							minWallThickness = 0.8, 
 							tooths           = 15, 
 							toothRatio       = 0.25);
 
 }
 linearbearing();
+
+
+//module distance_bearing(){
+//translate([-5,3.5,-11.5]) cube([10,10,23]);
+//			translate([-7,5.5,-11.5]) cube([14,2,23]);
+//}
+//module hightbearing(){
+//	difference(){
+//	distance_bearing();
+//	cylinder(r=7.5, h=23,center=true);
+//}
+//			}
+
+//hightbearing();
