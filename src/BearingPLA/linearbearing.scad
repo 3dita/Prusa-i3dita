@@ -175,16 +175,16 @@ module TLB_print(s = 4) {
 
 
 					TLB_linearBearing(
-							inner_d          = 8.1, 
+							inner_d          = 8.4, 
 							outer_d          = 15,
-							h                = 23,
+							h                = 50,
 							stringWidth      = 0.48,
 							minWallThickness = 0.8, 
 							tooths           = 15, 
 							toothRatio       = 0.25);
 
 }
-linearbearing();
+translate([0,0,25]) linearbearing();
 
 
 //module distance_bearing(){

@@ -23,8 +23,8 @@ use <inc/LM8UU_holder_ziptie.scad>;
 
 module caseesterno(){
 	difference(){
-				translate([0,0,250]) cube([300,300,500],center=true);
-				translate([0,0,250]) cube([295,295,501],center=true);
+				translate([0,0,250]) cube([416,416,380],center=true);
+				translate([0,0,250]) cube([364,364,501],center=true);
 				translate([0,0,124]) cube([200,310,250],center=true);
 				translate([0,0,124]) cube([310,200,250],center=true);
 			}
