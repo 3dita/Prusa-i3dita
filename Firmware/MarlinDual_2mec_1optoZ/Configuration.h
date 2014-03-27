@@ -48,7 +48,7 @@
 // 301 = Rambo
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 34
+#define MOTHERBOARD 33
 #endif
 
 //// The following define selects which power supply you have. Please choose the one that matches your setup
@@ -131,9 +131,13 @@
 
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 22.2
-    #define  DEFAULT_Ki 1.08  
-    #define  DEFAULT_Kd 114  
+//    #define  DEFAULT_Kp 22.2
+//    #define  DEFAULT_Ki 1.08  
+//    #define  DEFAULT_Kd 114  
+// Prusa falai3
+    #define  DEFAULT_Kp 15.58
+    #define  DEFAULT_Ki 0.98  
+    #define  DEFAULT_Kd 61.76 
 
 // Makergear
 //    #define  DEFAULT_Kp 7.0
@@ -190,7 +194,7 @@
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
-#define EXTRUDE_MINTEMP 175
+#define EXTRUDE_MINTEMP 20
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
 
 //===========================================================================
@@ -240,9 +244,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define DISABLE_Z true
 #define DISABLE_E false // For all extruders
 
-#define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
-#define INVERT_Y_DIR true    // for Mendel set to true, for Orca set to false
-#define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true
+#define INVERT_X_DIR false     // for Mendel set to false, for Orca set to true
+#define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
+#define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true
 #define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR false    // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
@@ -282,8 +286,8 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.1555, 80.1347, 3963, 450}  // default steps per unit for ultimaker
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 35}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.9609, 78.5149, 3935, 450}  // default steps per unit for ultimaker
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 10}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 

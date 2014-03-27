@@ -14,7 +14,7 @@ module belt_guide_base(){
 }
 
 module belt_guide_holes(){
- translate([0,0,2]) cylinder(r=6.1+clearence, h=10, $fn=50);
+ translate([0,0,2]) cylinder(r=6.5+clearence, h=10, $fn=50);
  translate([0,0,-1]) cylinder(r=5+wall+clearence-2*wall, h=10, $fn=50);
 }
 
