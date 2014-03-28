@@ -1,3 +1,10 @@
+// Fala Extruder
+// FUM 3mm
+// GNU GPL v3
+// Giacomo Falaschi <superfala@gmail.com> 
+// http://github.com/3dita/Prusa-i3dita
+// http://3dita.falaschi.com
+
 x_rod_distance = 45;
 
 // Select your belt type ******************************************************
