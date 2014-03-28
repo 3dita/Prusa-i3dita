@@ -1,14 +1,16 @@
-// 3dita.falaschi
-// X carriage 3dita
+// Fala Extruder
+// X carriage
 // GNU GPL v3
-// Falaschi Giacomo <superfala@gmail.com> and contributors
+// Giacomo Falaschi <superfala@gmail.com> 
 // http://github.com/3dita/Prusa-i3dita
 // http://3dita.falaschi.com
 
 include <inc/configuration.scad>
 use <inc/x_carriage_adapter.scad>
 use <inc/bearing.scad>
-
+//use <hardware.scad>
+//use <falestruder/miniExtruderFALA3.scad>
+//use <falestruder/jhead.scad>
 module x_carriage_base(){
  // Small bearing holder
  translate([-33/2,+2,0]) rotate([0,0,90]) horizontal_bearing_base(2);
@@ -19,10 +21,10 @@ module x_carriage_base(){
      translate([-36,20,0]) cube([39,16,17]);
     }
      // Base plate
-translate([-26.5,59,0]) cube([20,10,6]); //--Add 3Dita support x-carriage-adapter-mono
+translate([-26.5,59,0]) cube([20,10,6]); //--Add 3Dita supporti x-carriage-adapter-mono
  translate([-58.5,14,0]) cube([80+4.1,18,4.5+1.5]);
  translate([-58.5,51,0]) cube([80+4.1,10.5,4.5+1.5]);
-
+ //translate([-38,-35,-16]) cube([16,64,16]); ////--Add 3Dita
 }
 
 
@@ -96,3 +98,19 @@ module x_carriage(){
 }
 //
 x_carriage();
+//mono esxtruder adaptor
+//translate([-15.5,56.5,-27.5]) rotate([0,90,0]) x_carriage_adapter() ;   ////--Add 3Dita
+//translate([-26.5,56.5,-27.5]) rotate([0,90,0]) x_carriage_adapter() ;   ////--Add 3Dita
+
+//dual extruder
+//translate([-0.5,6.5,0]){
+//	translate([0,0,0]) rotate([0,0,0])
+//		{
+//		translate([-16,55,0]) rotate([180,0,0]) nema17();
+//		translate([5,35,-36]) rotate([0,180,0]) falestruder();
+//		translate([10.8,12,-44]) rotate([90,0,0]) hotend_jhead();
+//		}
+//translate([-58,55,0]) rotate([180,0,0]) nema17();
+//translate([-37,35,-36]) mirror([ 0, 0, 1 ]) rotate([0,360,0]) falestruder();
+//translate([-42.8,12,-44]) rotate([90,0,0]) hotend_jhead();
+//}
